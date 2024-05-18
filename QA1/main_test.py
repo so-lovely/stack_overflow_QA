@@ -1,5 +1,6 @@
 
-from stack_overflow_QA.QA1.linkbot import Linkbot
+from linkbot import Linkbot
+from pprint import pprint
 if __name__ == '__main__':
     start_url =  'https://arxiv.org/'
     print(start_url)
@@ -7,6 +8,8 @@ if __name__ == '__main__':
     Linkbot.startpoint_load()
     Linkbot.find_elements_by_tag('a', filter=False)
     Linkbot.filter_hrefs(2, 'list')
-    print(Linkbot.current_data)
+    pprint(Linkbot.past_data)
+
+    
 
 
